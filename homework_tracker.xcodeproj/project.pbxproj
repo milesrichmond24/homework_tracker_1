@@ -17,6 +17,7 @@
 		CCBC08462B027EA900C7AD32 /* homework_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC08452B027EA900C7AD32 /* homework_trackerTests.swift */; };
 		CCBC08502B027EA900C7AD32 /* homework_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC084F2B027EA900C7AD32 /* homework_trackerUITests.swift */; };
 		CCBC08522B027EA900C7AD32 /* homework_trackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC08512B027EA900C7AD32 /* homework_trackerUITestsLaunchTests.swift */; };
+		CCBC085F2B0281D100C7AD32 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC085E2B0281D100C7AD32 /* Assignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CCBC084B2B027EA900C7AD32 /* homework_trackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homework_trackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBC084F2B027EA900C7AD32 /* homework_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework_trackerUITests.swift; sourceTree = "<group>"; };
 		CCBC08512B027EA900C7AD32 /* homework_trackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework_trackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CCBC085E2B0281D100C7AD32 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		CCBC082A2B027EA600C7AD32 /* homework_tracker */ = {
 			isa = PBXGroup;
 			children = (
+				CCBC085E2B0281D100C7AD32 /* Assignment.swift */,
 				CCBC082B2B027EA600C7AD32 /* AppDelegate.swift */,
 				CCBC082D2B027EA600C7AD32 /* SceneDelegate.swift */,
 				CCBC082F2B027EA600C7AD32 /* ViewController.swift */,
@@ -264,6 +267,7 @@
 				CCBC08362B027EA600C7AD32 /* homework_tracker.xcdatamodeld in Sources */,
 				CCBC08302B027EA600C7AD32 /* ViewController.swift in Sources */,
 				CCBC082C2B027EA600C7AD32 /* AppDelegate.swift in Sources */,
+				CCBC085F2B0281D100C7AD32 /* Assignment.swift in Sources */,
 				CCBC082E2B027EA600C7AD32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
