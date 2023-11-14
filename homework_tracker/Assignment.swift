@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Assignment {
+struct Assignment: Encodable {
     var dueDate: Date;
     var assignmentName: String;
     var fromClass: String;
