@@ -185,8 +185,17 @@
                     <view key="view" contentMode="scaleToFill" id="HQ2-ds-n3b">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-Px-J1B">
+                                <rect key="frame" x="141" y="321" width="110" height="200"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dK7-b2-Ykg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hzN-Px-J1B" firstAttribute="width" secondItem="HQ2-ds-n3b" secondAttribute="width" multiplier="0.279898" id="IGZ-Uc-IwF"/>
+                            <constraint firstItem="hzN-Px-J1B" firstAttribute="height" secondItem="HQ2-ds-n3b" secondAttribute="height" multiplier="0.23753" id="KGF-Nc-2OO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lxy-cQ-aH4"/>
                 </viewController>
