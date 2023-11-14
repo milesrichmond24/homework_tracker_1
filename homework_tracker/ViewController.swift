@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     var assignments: [Assignment] = []
 
+    // Labels for the presented assignment
     @IBOutlet weak var description_outlet: UILabel!
     @IBOutlet weak var class_outlet: UILabel!
     @IBOutlet weak var date_outlet: UILabel!
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
     
     // Segue to ListViewController
     @IBAction func list_action(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "toList", sender: self)
     }
 }
 

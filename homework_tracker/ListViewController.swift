@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +27,12 @@ class ListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 }
