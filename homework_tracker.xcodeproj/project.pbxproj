@@ -19,6 +19,8 @@
 		CCBC08502B027EA900C7AD32 /* homework_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC084F2B027EA900C7AD32 /* homework_trackerUITests.swift */; };
 		CCBC08522B027EA900C7AD32 /* homework_trackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC08512B027EA900C7AD32 /* homework_trackerUITestsLaunchTests.swift */; };
 		CCBC085F2B0281D100C7AD32 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC085E2B0281D100C7AD32 /* Assignment.swift */; };
+		CCF1A6422B03C5C000E940A6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF1A6412B03C5C000E940A6 /* ListViewController.swift */; };
+		CCF1A6442B03C5C900E940A6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF1A6432B03C5C900E940A6 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CCBC084F2B027EA900C7AD32 /* homework_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework_trackerUITests.swift; sourceTree = "<group>"; };
 		CCBC08512B027EA900C7AD32 /* homework_trackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework_trackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CCBC085E2B0281D100C7AD32 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		CCF1A6412B03C5C000E940A6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		CCF1A6432B03C5C900E940A6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				CCBC082D2B027EA600C7AD32 /* SceneDelegate.swift */,
 				CCBC082F2B027EA600C7AD32 /* ViewController.swift */,
 				CCBC08312B027EA600C7AD32 /* Main.storyboard */,
+				CCF1A6412B03C5C000E940A6 /* ListViewController.swift */,
+				CCF1A6432B03C5C900E940A6 /* AddViewController.swift */,
 				B7EC4C102B02816700459302 /* tableViewController.swift */,
 				CCBC08372B027EA800C7AD32 /* Assets.xcassets */,
 				CCBC08392B027EA800C7AD32 /* LaunchScreen.storyboard */,
@@ -269,10 +275,12 @@
 			files = (
 				CCBC08362B027EA600C7AD32 /* homework_tracker.xcdatamodeld in Sources */,
 				CCBC08302B027EA600C7AD32 /* ViewController.swift in Sources */,
+				CCF1A6442B03C5C900E940A6 /* AddViewController.swift in Sources */,
 				CCBC082C2B027EA600C7AD32 /* AppDelegate.swift in Sources */,
 				CCBC085F2B0281D100C7AD32 /* Assignment.swift in Sources */,
 				CCBC082E2B027EA600C7AD32 /* SceneDelegate.swift in Sources */,
 				B7EC4C112B02816700459302 /* tableViewController.swift in Sources */,
+				CCF1A6422B03C5C000E940A6 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

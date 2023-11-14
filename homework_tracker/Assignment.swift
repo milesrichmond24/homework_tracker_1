@@ -11,4 +11,5 @@ struct Assignment {
     var dueDate: Date;
     var assignmentName: String;
     var fromClass: String;
+    var description: String;
 }
