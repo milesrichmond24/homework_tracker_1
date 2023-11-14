@@ -29,7 +29,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        AppData.assignments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

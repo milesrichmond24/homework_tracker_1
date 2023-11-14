@@ -9,13 +9,13 @@ import UIKit
 
 
 class AppData{
-    static var list = [Assignment]()
+    static var assignments = [Assignment]()
     
 }
 
 
 class ViewController: UIViewController {
-    var assignments: [Assignment] = []
+    
 
     // Labels for the presented assignment
     @IBOutlet weak var description_outlet: UILabel!
@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     @IBAction func list_action(_ sender: UIButton) {
         performSegue(withIdentifier: "toList", sender: self)
     }
+    
+    
     func soonestDate(list : [Assignment]) -> Assignment {
         var closest = INT_MAX
         var best = Assignment(dueDate: Date(), assignmentName: "", fromClass: "", description: "")
