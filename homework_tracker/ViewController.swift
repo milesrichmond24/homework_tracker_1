@@ -17,12 +17,22 @@ class AppData{
 class ViewController: UIViewController {
     var assignments: [Assignment] = []
 
+    // Labels for the presented assignment
+    @IBOutlet weak var description_outlet: UILabel!
+    @IBOutlet weak var class_outlet: UILabel!
+    @IBOutlet weak var date_outlet: UILabel!
+    @IBOutlet weak var name_outlet: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
 
     
+    // Segue to ListViewController
+    @IBAction func list_action(_ sender: UIButton) {
+        performSegue(withIdentifier: "toList", sender: self)
+    }
     func soonestDate(list : [Assignment]) -> Assignment {
         var closest = INT_MAX
         var best = Assignment(dueDate: Date(), assignmentName: "", fromClass: "", description: "")
