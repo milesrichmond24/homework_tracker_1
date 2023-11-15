@@ -26,6 +26,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        table_outlet.reloadData()
+    }
+    
 
     /*
     // MARK: - Navigation
