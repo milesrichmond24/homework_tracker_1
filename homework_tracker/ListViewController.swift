@@ -39,6 +39,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         //cell.textLabel?.text = "\(nums[indexPath.row])"
         //cell.detailTextLabel?.text = "WOWWWW"
         
+        cell.date_label.text = "\(AppData.assignments[indexPath.row].dueDate)"
+        cell.class_label.text = AppData.assignments[indexPath.row].fromClass
+        cell.name_label.text = AppData.assignments[indexPath.row].assignmentName
+        
         return cell
     }
     
