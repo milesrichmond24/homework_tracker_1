@@ -8,7 +8,7 @@
 import UIKit
 
 
-class AppData{
+class AppData : Codable{
     static var assignments = [Assignment]()
     
 }
@@ -16,6 +16,7 @@ class AppData{
 
 class ViewController: UIViewController {
     
+    var defaults = UserDefaults.standard
 
     // Labels for the presented assignment
     @IBOutlet weak var description_outlet: UILabel!
@@ -25,6 +26,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if let items = defaults.data(forKey: "theList") {
+                        let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Assignment].self, from: items) {
+                AppData.assignments  = decoded
+                        }
+                }
+        
         if(AppData.assignments.count == 0){
             date_outlet.text = "NOW!"
             class_outlet.text = "Make an assignment!!!"
