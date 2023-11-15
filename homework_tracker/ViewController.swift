@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         else{
             date_outlet.text = "\(soonestDate(list: AppData.assignments).dueDate.formatted(.dateTime))"
             class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
+            description_outlet.text = "\(soonestDate(list: AppData.assignments).description)"
         }
         
     }

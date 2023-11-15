@@ -9,9 +9,11 @@ import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     @IBOutlet weak var table_outlet: UITableView!
     var defaults = UserDefaults.standard
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +29,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        table_outlet.reloadData()
+        if let items = defaults.data(forKey: "theList") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Assignment].self, from: items) {
+                AppData.assignments  = decoded
+            }
+            table_outlet.reloadData()
+        }
     }
-    
 
     /*
     // MARK: - Navigation
@@ -46,7 +53,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! AssignmentCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "assignment") as! AssignmentCell
         //cell.textLabel?.text = "\(nums[indexPath.row])"
         //cell.detailTextLabel?.text = "WOWWWW"
         
