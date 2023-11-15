@@ -29,14 +29,6 @@ class ViewController: UIViewController {
         class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
         
     }
-
-
-    
-    // Segue to ListViewController
-    @IBAction func list_action(_ sender: UIButton) {
-        performSegue(withIdentifier: "toList", sender: self)
-    }
-    
     
     func soonestDate(list : [Assignment]) -> Assignment {
         var closest = INT_MAX

@@ -41,4 +41,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    @IBAction func add_action(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAdd", sender: self)
+    }
 }
