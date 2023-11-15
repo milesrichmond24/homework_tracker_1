@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        date_outlet.text = "\(soonestDate(list: AppData.assignments).dueDate)"
+        class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
+        
     }
 
 

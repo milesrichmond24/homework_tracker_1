@@ -14,7 +14,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        table_outlet.delegate = self
+        table_outlet.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -34,6 +35,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! AssignmentCell
+        //cell.textLabel?.text = "\(nums[indexPath.row])"
+        //cell.detailTextLabel?.text = "WOWWWW"
+        
+        return cell
     }
 }
