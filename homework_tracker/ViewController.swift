@@ -25,8 +25,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        date_outlet.text = "\(soonestDate(list: AppData.assignments).dueDate)"
-        class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
+        if(AppData.assignments.count == 0){
+            date_outlet.text = "NOW!"
+            class_outlet.text = "Make an assignment!!!"
+            description_outlet.text = "When you make an assignment, the assignment closest to this date will show up here!"
+        }
+        else{
+            date_outlet.text = "\(soonestDate(list: AppData.assignments).dueDate.formatted(.dateTime))"
+            class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
+        }
         
     }
 
