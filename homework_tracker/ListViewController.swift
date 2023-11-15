@@ -9,6 +9,7 @@ import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var table_outlet: UITableView!
     
 
     override func viewDidLoad() {
