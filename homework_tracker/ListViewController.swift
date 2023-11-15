@@ -10,12 +10,19 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var table_outlet: UITableView!
-    
+    var defaults = UserDefaults.standard
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         table_outlet.delegate = self
         table_outlet.dataSource = self
+        if let items = defaults.data(forKey: "theList") {
+                        let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Assignment].self, from: items) {
+                AppData.assignments  = decoded
+                        }
+                }
         // Do any additional setup after loading the view.
     }
     

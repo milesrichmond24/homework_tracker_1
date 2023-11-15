@@ -13,6 +13,11 @@ class AddViewController: UIViewController {
     @IBOutlet weak var description_textField: UITextField!
     @IBOutlet weak var class_textField: UITextField!
     @IBOutlet weak var date_input: UIDatePicker!
+    
+    var defaults = UserDefaults.standard
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,5 +35,10 @@ class AddViewController: UIViewController {
         name_textField.text = ""
         description_textField.text = ""
         class_textField.text = ""
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.assignments){
+                           defaults.set(encoded, forKey: "theList")
+                       }
     }
 }
