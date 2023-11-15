@@ -18,12 +18,12 @@ class AddViewController: UIViewController {
     }
 
     @IBAction func add_action(_ sender: UIButton) {
-        let name = name_textField.text
-        let description = description_textField.text
-        let class = class_textField.text
+        let name = name_textField.text!
+        let description = description_textField.text!
+        let className = class_textField.text!
         let date = date_input.date
         
-        let newAssignment = Assignment(dueDate: date, assignmentName: name, fromClass: class, description: description)
+        let newAssignment = Assignment(dueDate: date, assignmentName: name, fromClass: className, description: description)
         
         AppData.assignments.append(newAssignment)
         
