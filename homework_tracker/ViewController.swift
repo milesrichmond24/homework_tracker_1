@@ -46,14 +46,6 @@ class ViewController: UIViewController {
         }
         
     }
-
-
-    
-    // Segue to ListViewController
-    @IBAction func list_action(_ sender: UIButton) {
-        performSegue(withIdentifier: "toList", sender: self)
-    }
-    
     
     func soonestDate(list : [Assignment]) -> Assignment {
         var closest = INT_MAX

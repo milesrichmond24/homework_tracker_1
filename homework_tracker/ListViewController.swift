@@ -31,7 +31,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        AppData.assignments.count
+        return AppData.assignments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,5 +44,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.name_label.text = AppData.assignments[indexPath.row].assignmentName
         
         return cell
+    }
+    
+    @IBAction func add_action(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAdd", sender: self)
     }
 }
