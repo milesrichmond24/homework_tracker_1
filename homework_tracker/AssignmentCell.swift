@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class AssignmentCell: UITableViewCell {
+    //asdf;ljahdsfg;lshdfsdfadsfg
     @IBOutlet weak var date_label: UILabel!
     @IBOutlet weak var class_label: UILabel!
     @IBOutlet weak var name_label: UILabel!
