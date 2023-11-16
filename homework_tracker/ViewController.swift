@@ -59,6 +59,7 @@ class ViewController: UIViewController {
                 best = guy
             }
         }
+        
         return best
         }
     
