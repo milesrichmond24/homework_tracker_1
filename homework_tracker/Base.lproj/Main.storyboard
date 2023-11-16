@@ -96,6 +96,7 @@
                         <outlet property="class_outlet" destination="5Rv-bU-rG5" id="bkW-fM-9LT"/>
                         <outlet property="date_outlet" destination="MAG-W2-P6f" id="IRV-XD-RiJ"/>
                         <outlet property="description_outlet" destination="NsM-mB-sdk" id="FA9-P9-sZm"/>
+                        <outlet property="name_outlet" destination="aeQ-Pf-6HJ" id="x8A-B4-ErV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
