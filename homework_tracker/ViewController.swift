@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         }
         
         if(AppData.assignments.count == 0){
+            name_outlet.text = "You are a disgrace"
             date_outlet.text = "NOW!"
             class_outlet.text = "Make an assignment!!!"
             description_outlet.text = "When you make an assignment, the assignment closest to this date will show up here!"
