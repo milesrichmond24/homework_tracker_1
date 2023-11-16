@@ -26,14 +26,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if let items = defaults.data(forKey: "theList") {
-                        let decoder = JSONDecoder()
+            let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([Assignment].self, from: items) {
                 AppData.assignments  = decoded
-                        }
-                }
+            }
+        }
         
         if(AppData.assignments.count == 0){
             date_outlet.text = "NOW!"
@@ -41,11 +42,12 @@ class ViewController: UIViewController {
             description_outlet.text = "When you make an assignment, the assignment closest to this date will show up here!"
         }
         else{
+            
+            print(AppData.assignments[0].dueDate.formatted(.dateTime))
             date_outlet.text = "\(soonestDate(list: AppData.assignments).dueDate.formatted(.dateTime))"
             class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
             description_outlet.text = "\(soonestDate(list: AppData.assignments).description)"
         }
-        
     }
     
     func soonestDate(list : [Assignment]) -> Assignment {
