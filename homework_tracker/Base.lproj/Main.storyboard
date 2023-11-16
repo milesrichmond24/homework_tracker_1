@@ -155,6 +155,11 @@
                                                         <constraint firstItem="6aW-EA-mv7" firstAttribute="centerX" secondItem="WrI-vx-2Pf" secondAttribute="centerX" id="pWH-7h-7mD"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="class_label" destination="tJj-RH-qHQ" id="hcA-6a-onh"/>
+                                                    <outlet property="date_label" destination="fnb-pr-wtG" id="z6T-Mv-IU7"/>
+                                                    <outlet property="name_label" destination="rx4-GQ-fEv" id="Z0A-Vj-V83"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -181,7 +186,7 @@
                             <constraint firstItem="tNC-wO-Y9i" firstAttribute="centerX" secondItem="aGl-0J-9ph" secondAttribute="centerX" id="i6A-UG-4hZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Assignment List" id="PRp-Ri-bg8"/>
+                    <tabBarItem key="tabBarItem" title="Assignment List" image="list.bullet.rectangle" catalog="system" id="PRp-Ri-bg8"/>
                     <navigationItem key="navigationItem" id="ra0-NF-e3J"/>
                     <connections>
                         <outlet property="table_outlet" destination="6cj-hL-eGt" id="nXG-2K-Neu"/>
@@ -271,6 +276,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
