@@ -64,6 +64,22 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            AppData.assignments.remove(at: indexPath.row)
+            table_outlet.reloadData()
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(AppData.assignments){
+                defaults.set(encoded, forKey: "theList")
+            }
+           
+        }
+    }
+    
     @IBAction func add_action(_ sender: UIButton) {
         performSegue(withIdentifier: "toAdd", sender: self)
     }
