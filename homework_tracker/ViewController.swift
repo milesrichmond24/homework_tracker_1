@@ -44,15 +44,15 @@ class ViewController: UIViewController {
         else{
             
             print(AppData.assignments[0].dueDate.formatted(.dateTime))
-            date_outlet.text = "\(soonestDate(list: AppData.assignments).dueDate.formatted(.dateTime))"
-            class_outlet.text = "\(soonestDate(list: AppData.assignments).fromClass)"
-            description_outlet.text = "\(soonestDate(list: AppData.assignments).description)"
+            date_outlet.text = "Date: \(soonestDate(list: AppData.assignments).dueDate.formatted(.dateTime))"
+            class_outlet.text = "Class: \(soonestDate(list: AppData.assignments).fromClass)"
+            description_outlet.text = "Desc: \(soonestDate(list: AppData.assignments).description)"
         }
     }
     
     func soonestDate(list : [Assignment]) -> Assignment {
         var closest = INT_MAX
-        var best = Assignment(dueDate: Date(), assignmentName: "", fromClass: "", description: "")
+        var best = Assignment(dueDate: Date.distantPast, assignmentName: "No New Assignment", fromClass: "x", description: "x");
         for guy in list{
             if(Int32(guy.dueDate.timeIntervalSinceNow) < closest && guy.dueDate.timeIntervalSinceNow > -1){
                 closest = Int32(guy.dueDate.timeIntervalSinceNow)
