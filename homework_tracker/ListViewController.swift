@@ -49,17 +49,30 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.assignments.count
+        return AppData.assignments.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if(indexPath.row == 0) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "label") as! AssignmentCell
+            cell.name_label.text = "Assignment"
+            cell.class_label.text = "For Class"
+            cell.date_label.text = "Due Date"
+            
+            cell.name_label.backgroundColor = UIColor.lightGray
+            cell.class_label.backgroundColor = UIColor.lightGray
+            cell.date_label.backgroundColor = UIColor.lightGray
+            
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "assignment") as! AssignmentCell
         //cell.textLabel?.text = "\(nums[indexPath.row])"
         //cell.detailTextLabel?.text = "WOWWWW"
         
-        cell.date_label.text = "\(AppData.assignments[indexPath.row].dueDate.formatted(.dateTime))"
-        cell.class_label.text = AppData.assignments[indexPath.row].fromClass
-        cell.name_label.text = AppData.assignments[indexPath.row].assignmentName
+        cell.date_label.text = "\(AppData.assignments[indexPath.row - 1].dueDate.formatted(.dateTime))"
+        cell.class_label.text = AppData.assignments[indexPath.row - 1].fromClass
+        cell.name_label.text = AppData.assignments[indexPath.row - 1].assignmentName
         
         return cell
     }
@@ -70,7 +83,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            AppData.assignments.remove(at: indexPath.row)
+            AppData.assignments.remove(at: indexPath.row - 1)
             table_outlet.reloadData()
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(AppData.assignments){
