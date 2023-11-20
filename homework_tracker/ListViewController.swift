@@ -67,7 +67,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         AppData.assignments = AppData.assignments.sorted(by: {
-            $0.dueDate.compare($1.dueDate) == .orderedDescending
+            $0.dueDate.compare($1.dueDate) == .orderedAscending
         })
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "assignment") as! AssignmentCell
