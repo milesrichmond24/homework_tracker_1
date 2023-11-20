@@ -272,20 +272,28 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwh-A0-vEr">
-                                                <rect key="frame" x="0.0" y="127.66666666666664" width="393" height="136.33333333333337"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwh-A0-vEr">
+                                                <rect key="frame" x="0.0" y="127.66666666666666" width="393" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zO4-zj-QZH">
-                                                <rect key="frame" x="0.0" y="264" width="393" height="42.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cch-V2-RBp">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vx-4n-ELI">
+                                                <rect key="frame" x="0.0" y="161.66666666666669" width="393" height="144.66666666666669"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feL-I6-N8M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="144"/>
+                                                    </pickerView>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew5-nx-lVm">
+                                                        <rect key="frame" x="289" y="0.0" width="104" height="144.66666666666666"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="New Class"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cch-V2-RBp">
                                                 <rect key="frame" x="0.0" y="306.33333333333331" width="393" height="85.333333333333314"/>
                                             </datePicker>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-hc-sAN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-hc-sAN">
                                                 <rect key="frame" x="0.0" y="391.66666666666669" width="393" height="34.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Add Assignment"/>
@@ -297,7 +305,6 @@
                                         <constraints>
                                             <constraint firstItem="sFe-xU-tsF" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.3" id="FPe-IQ-2Jw"/>
                                             <constraint firstItem="cch-V2-RBp" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.2" id="kI3-5i-1p9"/>
-                                            <constraint firstItem="zO4-zj-QZH" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.1" id="z2I-L3-pj7"/>
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kZ-Iv-qbU">
@@ -320,7 +327,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="lxy-cQ-aH4"/>
                     <connections>
-                        <outlet property="class_textField" destination="zO4-zj-QZH" id="Z0L-Gi-lqy"/>
                         <outlet property="date_input" destination="cch-V2-RBp" id="kMp-6w-aHu"/>
                         <outlet property="description_textField" destination="mwh-A0-vEr" id="auN-qk-ITL"/>
                         <outlet property="name_textField" destination="sFe-xU-tsF" id="RGW-Sq-LX6"/>
