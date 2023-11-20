@@ -19,7 +19,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CDn-Ix-XBN"/>
-                        <segue destination="6vY-Qp-Emr" kind="relationship" relationship="viewControllers" id="VzW-fJ-PCC"/>
+                        <segue destination="Y1h-W3-iTB" kind="relationship" relationship="viewControllers" id="VzW-fJ-PCC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6H-LW-554" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="-802" y="-297"/>
         </scene>
-        <!--Assignment List-->
+        <!--List View Controller-->
         <scene sceneID="brD-KI-UmJ">
             <objects>
                 <viewController id="6vY-Qp-Emr" customClass="ListViewController" customModule="homework_tracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tNC-wO-Y9i">
-                                <rect key="frame" x="0.0" y="-12" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="10" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2023-11-17 at 9.08.40 AM" translatesAutoresizingMaskIntoConstraints="NO" id="Tc2-FL-ZPl">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="170.33333333333334"/>
@@ -243,7 +243,6 @@
                             <constraint firstItem="tNC-wO-Y9i" firstAttribute="centerX" secondItem="aGl-0J-9ph" secondAttribute="centerX" id="i6A-UG-4hZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Assignment List" image="list.bullet.rectangle" catalog="system" id="PRp-Ri-bg8"/>
                     <navigationItem key="navigationItem" id="ra0-NF-e3J"/>
                     <connections>
                         <outlet property="table_outlet" destination="6cj-hL-eGt" id="nXG-2K-Neu"/>
@@ -252,42 +251,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWX-ah-sPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-802" y="499"/>
+            <point key="canvasLocation" x="124.42748091603053" y="498.59154929577466"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="gna-qq-5Zv">
             <objects>
                 <viewController id="IDf-g4-56n" customClass="AddViewController" customModule="homework_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQ2-ds-n3b">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-Px-J1B">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="90" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZyU-ND-bsU">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="421"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-xU-tsF">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="126.33333333333333"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="127.66666666666667"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwh-A0-vEr">
-                                                <rect key="frame" x="0.0" y="126.33333333333331" width="393" height="134"/>
+                                                <rect key="frame" x="0.0" y="127.66666666666664" width="393" height="136.33333333333337"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zO4-zj-QZH">
-                                                <rect key="frame" x="0.0" y="260.33333333333331" width="393" height="42"/>
+                                                <rect key="frame" x="0.0" y="264" width="393" height="42.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cch-V2-RBp">
-                                                <rect key="frame" x="0.0" y="302.33333333333331" width="393" height="84.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="306.33333333333331" width="393" height="85.333333333333314"/>
                                             </datePicker>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-hc-sAN">
-                                                <rect key="frame" x="0.0" y="386.66666666666669" width="393" height="34.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="391.66666666666669" width="393" height="34.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Add Assignment"/>
                                                 <connections>
@@ -302,7 +301,7 @@
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kZ-Iv-qbU">
-                                        <rect key="frame" x="0.0" y="421" width="393" height="421"/>
+                                        <rect key="frame" x="0.0" y="426" width="393" height="426"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -313,7 +312,7 @@
                         <viewLayoutGuide key="safeArea" id="dK7-b2-Ykg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hzN-Px-J1B" firstAttribute="centerY" secondItem="dK7-b2-Ykg" secondAttribute="centerY" id="0Ua-7M-S8h"/>
+                            <constraint firstItem="hzN-Px-J1B" firstAttribute="centerY" secondItem="dK7-b2-Ykg" secondAttribute="centerY" constant="80" id="0Ua-7M-S8h"/>
                             <constraint firstItem="hzN-Px-J1B" firstAttribute="width" secondItem="HQ2-ds-n3b" secondAttribute="width" id="IGZ-Uc-IwF"/>
                             <constraint firstItem="hzN-Px-J1B" firstAttribute="height" secondItem="HQ2-ds-n3b" secondAttribute="height" id="KGF-Nc-2OO"/>
                             <constraint firstItem="hzN-Px-J1B" firstAttribute="centerX" secondItem="dK7-b2-Ykg" secondAttribute="centerX" id="bpP-fw-Qud"/>
@@ -329,7 +328,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T7-RI-4XP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="499"/>
+            <point key="canvasLocation" x="1362.5954198473282" y="498.59154929577466"/>
+        </scene>
+        <!--Assignment List-->
+        <scene sceneID="WVQ-2f-sso">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y1h-W3-iTB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Assignment List" image="list.bullet.rectangle" catalog="system" id="PRp-Ri-bg8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jsl-3M-6sg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6vY-Qp-Emr" kind="relationship" relationship="rootViewController" id="yr2-3F-Obf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYO-S1-cqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802.29007633587787" y="498.59154929577466"/>
         </scene>
     </scenes>
     <resources>
