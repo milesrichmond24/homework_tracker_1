@@ -126,7 +126,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="170.33333333333334"/>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-hL-eGt">
-                                        <rect key="frame" x="0.0" y="170.33333333333334" width="393" height="511.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="170.33333333333337" width="393" height="426"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="label" id="lC8-KF-lRI" customClass="AssignmentCell" customModule="homework_tracker" customModuleProvider="target">
@@ -220,7 +220,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2U-d9-udu">
-                                        <rect key="frame" x="0.0" y="681.66666666666663" width="393" height="170.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="596.33333333333337" width="393" height="255.66666666666663"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                         <connections>
@@ -229,8 +229,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="G2U-d9-udu" firstAttribute="height" secondItem="tNC-wO-Y9i" secondAttribute="height" multiplier="0.2" id="BMq-28-Ak3"/>
-                                    <constraint firstItem="6cj-hL-eGt" firstAttribute="height" secondItem="tNC-wO-Y9i" secondAttribute="height" multiplier="0.6" id="fkU-Ix-abk"/>
+                                    <constraint firstItem="G2U-d9-udu" firstAttribute="height" secondItem="tNC-wO-Y9i" secondAttribute="height" multiplier="0.3" id="BMq-28-Ak3"/>
+                                    <constraint firstItem="6cj-hL-eGt" firstAttribute="height" secondItem="tNC-wO-Y9i" secondAttribute="height" multiplier="0.5" id="fkU-Ix-abk"/>
                                 </constraints>
                             </stackView>
                         </subviews>
