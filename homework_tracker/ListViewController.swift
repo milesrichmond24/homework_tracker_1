@@ -95,5 +95,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func add_action(_ sender: UIButton) {
         performSegue(withIdentifier: "toAdd", sender: self)
+        table_outlet.reloadData()
     }
 }
