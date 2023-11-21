@@ -98,8 +98,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("yay")
-    }
+        performSegue(withIdentifier: "selectAssignment", sender: self)    }
     
     @IBAction func add_action(_ sender: UIButton) {
         performSegue(withIdentifier: "toAdd", sender: self)
