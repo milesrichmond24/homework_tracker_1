@@ -97,6 +97,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("yay")
+    }
+    
     @IBAction func add_action(_ sender: UIButton) {
         performSegue(withIdentifier: "toAdd", sender: self)
         table_outlet.reloadData()
