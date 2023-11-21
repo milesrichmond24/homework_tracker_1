@@ -273,15 +273,38 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwh-A0-vEr">
-                                                <rect key="frame" x="0.0" y="127.66666666666664" width="393" height="136.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="127.66666666666666" width="393" height="93.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zO4-zj-QZH">
-                                                <rect key="frame" x="0.0" y="264" width="393" height="42.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vx-4n-ELI">
+                                                <rect key="frame" x="0.0" y="221.33333333333331" width="393" height="85"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feL-I6-N8M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="227.33333333333334" height="85"/>
+                                                    </pickerView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew5-nx-lVm">
+                                                        <rect key="frame" x="227.33333333333334" y="0.0" width="70.666666666666657" height="85"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Add"/>
+                                                        <connections>
+                                                            <action selector="add_class" destination="IDf-g4-56n" eventType="touchUpInside" id="lwR-Gu-DdE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyR-Zc-hjz">
+                                                        <rect key="frame" x="298" y="0.0" width="95" height="85"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Delete"/>
+                                                        <connections>
+                                                            <action selector="delete_action:" destination="IDf-g4-56n" eventType="touchUpInside" id="Sco-9O-BD7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="fyR-Zc-hjz" firstAttribute="width" secondItem="Ew5-nx-lVm" secondAttribute="width" multiplier="1.34146" id="Rhz-GH-iIG"/>
+                                                    <constraint firstItem="Ew5-nx-lVm" firstAttribute="width" secondItem="7vx-4n-ELI" secondAttribute="width" multiplier="0.18" id="Uf1-Oj-5WK"/>
+                                                </constraints>
+                                            </stackView>
                                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cch-V2-RBp">
                                                 <rect key="frame" x="0.0" y="306.33333333333331" width="393" height="85.333333333333314"/>
                                             </datePicker>
@@ -296,8 +319,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="sFe-xU-tsF" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.3" id="FPe-IQ-2Jw"/>
+                                            <constraint firstItem="7vx-4n-ELI" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.2" id="QcQ-Vw-KPd"/>
                                             <constraint firstItem="cch-V2-RBp" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.2" id="kI3-5i-1p9"/>
-                                            <constraint firstItem="zO4-zj-QZH" firstAttribute="height" secondItem="ZyU-ND-bsU" secondAttribute="height" multiplier="0.1" id="z2I-L3-pj7"/>
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kZ-Iv-qbU">
@@ -320,7 +343,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lxy-cQ-aH4"/>
                     <connections>
-                        <outlet property="class_textField" destination="zO4-zj-QZH" id="Z0L-Gi-lqy"/>
+                        <outlet property="class_picker" destination="feL-I6-N8M" id="5P6-YB-Eh8"/>
                         <outlet property="date_input" destination="cch-V2-RBp" id="kMp-6w-aHu"/>
                         <outlet property="description_textField" destination="mwh-A0-vEr" id="auN-qk-ITL"/>
                         <outlet property="name_textField" destination="sFe-xU-tsF" id="RGW-Sq-LX6"/>

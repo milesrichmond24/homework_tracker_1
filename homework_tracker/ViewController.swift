@@ -10,7 +10,7 @@ import UIKit
 
 class AppData : Codable{
     static var assignments = [Assignment]()
-    
+    static var classes = [String]()
 }
 
 
@@ -33,6 +33,12 @@ class ViewController: UIViewController {
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([Assignment].self, from: items) {
                 AppData.assignments  = decoded
+            }
+        }
+        if let classes = defaults.data(forKey: "classes") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([String].self, from: classes) {
+                AppData.classes = decoded
             }
         }
         
