@@ -66,6 +66,10 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
         }
         
+        AppData.assignments = AppData.assignments.sorted(by: {
+            $0.dueDate.compare($1.dueDate) == .orderedAscending
+        })
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "assignment") as! AssignmentCell
         //cell.textLabel?.text = "\(nums[indexPath.row])"
         //cell.detailTextLabel?.text = "WOWWWW"
