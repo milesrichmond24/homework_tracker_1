@@ -11,6 +11,7 @@ import UIKit
 class AppData : Codable{
     static var assignments = [Assignment]()
     static var classes = [String]()
+    static var selected = Assignment(dueDate: Date(), assignmentName: "Ugh", fromClass: "Ugh", description: "Ugh")
 }
 
 
