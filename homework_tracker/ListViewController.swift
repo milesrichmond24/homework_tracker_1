@@ -98,7 +98,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AppData.selected = Assignment(dueDate: AppData.assignments[indexPath.row].dueDate, assignmentName: AppData.assignments[indexPath.row].assignmentName, fromClass: AppData.assignments[indexPath.row].fromClass, description: AppData.assignments[indexPath.row].description)
+        let selected = AppData.assignments[indexPath.row - 1] ?? Assignment(dueDate: Date.now, assignmentName: "", fromClass: "", description: "")
+        AppData.selected = selected
         performSegue(withIdentifier: "selectAssignment", sender: self)    }
     
     @IBAction func add_action(_ sender: UIButton) {
