@@ -7,8 +7,6 @@
 
 import UIKit
 import SwiftUI
-import ConfettiSwiftUI
-
 
 class AssignmentViewController: UIViewController {
 
@@ -19,9 +17,10 @@ class AssignmentViewController: UIViewController {
     
     var selectedAssignment: Assignment!
     
+    @State private var counter: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
