@@ -91,7 +91,6 @@
 		CCBC081F2B027EA600C7AD32 = {
 			isa = PBXGroup;
 			children = (
-				CCDC4EE62B0D068100100E6F /* AssignmentViewController.swift */,
 				CCBC082A2B027EA600C7AD32 /* homework_tracker */,
 				CCBC08442B027EA900C7AD32 /* homework_trackerTests */,
 				CCBC084E2B027EA900C7AD32 /* homework_trackerUITests */,
@@ -112,6 +111,7 @@
 		CCBC082A2B027EA600C7AD32 /* homework_tracker */ = {
 			isa = PBXGroup;
 			children = (
+				CCDC4EE62B0D068100100E6F /* AssignmentViewController.swift */,
 				CCBC085E2B0281D100C7AD32 /* Assignment.swift */,
 				CCBC082B2B027EA600C7AD32 /* AppDelegate.swift */,
 				CCBC082D2B027EA600C7AD32 /* SceneDelegate.swift */,

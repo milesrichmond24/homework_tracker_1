@@ -287,22 +287,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uH8-Ao-TCp">
-                                        <rect key="frame" x="0.0" y="187.33333333333337" width="353.66666666666669" height="426"/>
+                                        <rect key="frame" x="0.0" y="187.3333333333334" width="353.66666666666669" height="357.66666666666674"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY9-VT-0Sr">
-                                        <rect key="frame" x="0.0" y="613.33333333333326" width="353.66666666666669" height="68"/>
+                                        <rect key="frame" x="0.0" y="545" width="353.66666666666669" height="68.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVd-cQ-zVd">
+                                        <rect key="frame" x="0.0" y="613.33333333333326" width="353.66666666666669" height="68"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Im all done!"/>
+                                        <connections>
+                                            <action selector="done_action:" destination="Q7f-vP-FLy" eventType="touchUpInside" id="thA-WK-Svu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <constraints>
                                     <constraint firstItem="WLG-21-ORJ" firstAttribute="height" secondItem="Sb3-5F-wtw" secondAttribute="height" multiplier="0.2" id="3Ot-mv-04B"/>
                                     <constraint firstItem="8dp-GV-1Wg" firstAttribute="height" secondItem="Sb3-5F-wtw" secondAttribute="height" multiplier="0.075" id="eXy-Wp-lMl"/>
+                                    <constraint firstItem="cVd-cQ-zVd" firstAttribute="height" secondItem="Sb3-5F-wtw" secondAttribute="height" multiplier="0.1" id="qAo-Ke-VLm"/>
                                     <constraint firstItem="SY9-VT-0Sr" firstAttribute="height" secondItem="Sb3-5F-wtw" secondAttribute="height" multiplier="0.1" id="vIi-xk-ogh"/>
                                 </constraints>
                             </stackView>
