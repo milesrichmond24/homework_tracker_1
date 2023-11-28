@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     
 
@@ -24,6 +24,8 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         class_picker.delegate = self
         class_picker.dataSource = self
+        name_textField.delegate = self
+        description_textField.delegate = self
     }
 
     @IBAction func add_action(_ sender: UIButton) {
@@ -31,6 +33,9 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         let description = description_textField.text!
         let date = date_input.date
         let className = AppData.classes[class_picker.selectedRow(inComponent: 0)]
+        
+        name_textField.resignFirstResponder()
+        description_textField.resignFirstResponder()
         
         let newAssignment = Assignment(dueDate: date, assignmentName: name, fromClass: className, description: description)
         
@@ -104,5 +109,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return AppData.classes[row]
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
 }
