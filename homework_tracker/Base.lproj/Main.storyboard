@@ -331,11 +331,28 @@
                         <outlet property="date_label" destination="SY9-VT-0Sr" id="SUk-aM-y1v"/>
                         <outlet property="desc_label" destination="uH8-Ao-TCp" id="rci-eD-AAi"/>
                         <outlet property="name_label" destination="WLG-21-ORJ" id="3ZD-tb-sHq"/>
+                        <segue destination="T05-bN-Q1F" kind="show" identifier="confetti" id="iA5-gR-5PE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfP-bk-PuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1346" y="218"/>
+        </scene>
+        <!--Confetti View Controller-->
+        <scene sceneID="8l0-Ci-82t">
+            <objects>
+                <viewController id="T05-bN-Q1F" customClass="ConfettiViewController" customModule="homework_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axt-fp-XXz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="en7-mg-dhn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jNY-aX-5K5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgB-gD-3nI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560" y="218"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="gna-qq-5Zv">
