@@ -48,6 +48,12 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if let encoded = try? encoder.encode(AppData.assignments){
            defaults.set(encoded, forKey: "theList")
        }
+        
+        let ac = UIAlertController(title: "Assignment added successfully", message: "", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Cool", style: .default)
+        ac.addAction(ok)
+        
+        present(ac, animated: true)
     }
     
     @IBAction func add_class() {

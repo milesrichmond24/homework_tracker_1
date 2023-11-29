@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         var closest = INT_MAX
         var best = Assignment(dueDate: Date.distantPast, assignmentName: "No New Assignment", fromClass: "", description: "");
         for guy in list{
-            if(Int32(guy.dueDate.timeIntervalSinceNow) < closest && guy.dueDate.timeIntervalSinceNow > -1){
+            if(Int32(guy.dueDate.timeIntervalSinceNow) < closest /*&& guy.dueDate.timeIntervalSinceNow > -1*/){
                 closest = Int32(guy.dueDate.timeIntervalSinceNow)
                 best = guy
             }
